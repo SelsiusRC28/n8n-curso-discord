@@ -64,6 +64,11 @@ const router = createRouter({
           name: 'semana-10',
           component: () => import('@/views/semanas/Semana10View.vue'),
         },
+        {
+          path: 'certificado',
+          name: 'certificado',
+          component: () => import('@/views/CertificadoView.vue'),
+        },
       ],
     },
   ],

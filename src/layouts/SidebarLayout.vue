@@ -65,10 +65,20 @@ const pages = [
     subtitle: 'Cierre y portafolio profesional',
     badge: '10',
   },
+  {
+    to: '/certificado',
+    title: 'Recibir certificado',
+    subtitle: 'Certificacion final del curso',
+    badge: 'OK',
+  },
 ]
 
+function isActivePage(path) {
+  return route.path === path
+}
+
 const activePage = computed(
-  () => pages.find((page) => route.path.startsWith(page.to)) ?? pages[0],
+  () => pages.find((page) => isActivePage(page.to)) ?? pages[0],
 )
 </script>
 
@@ -89,7 +99,7 @@ const activePage = computed(
                 Curso
               </p>
               <h1 class="text-2xl font-semibold tracking-tight text-white">
-                n8n Flow Lab
+                n8n Curso Premium
               </h1>
             </div>
           </div>
@@ -115,13 +125,13 @@ const activePage = computed(
               :key="page.to"
               :to="page.to"
               class="group flex items-center gap-4 rounded-2xl border px-4 py-3 transition-all duration-200"
-              :class="route.path.startsWith(page.to)
+              :class="isActivePage(page.to)
                 ? 'border-orange-400/40 bg-orange-500/12 shadow-[0_12px_30px_rgba(249,115,22,0.10)]'
                 : 'border-white/5 bg-white/[0.02] hover:border-orange-500/20 hover:bg-orange-500/5'"
             >
               <div
                 class="flex h-11 w-11 items-center justify-center rounded-2xl text-sm font-semibold transition-colors"
-                :class="route.path.startsWith(page.to)
+                :class="isActivePage(page.to)
                   ? 'bg-orange-500 text-black'
                   : 'bg-zinc-900 text-orange-300 group-hover:bg-orange-500/15'"
               >
@@ -131,13 +141,40 @@ const activePage = computed(
               <div class="min-w-0 flex-1">
                 <p
                   class="truncate text-sm font-semibold"
-                  :class="route.path.startsWith(page.to) ? 'text-white' : 'text-zinc-200'"
+                  :class="isActivePage(page.to) ? 'text-white' : 'text-zinc-200'"
                 >
                   {{ page.title }}
                 </p>
                 <p class="truncate text-xs text-zinc-500">
                   {{ page.subtitle }}
                 </p>
+              </div>
+            </RouterLink>
+          </div>
+
+          <div class="mt-6 border-t border-white/5 pt-6">
+            <RouterLink
+              to="/certificado"
+              class="block rounded-3xl border px-5 py-5 transition-all duration-200"
+              :class="isActivePage('/certificado')
+                ? 'border-orange-400/40 bg-gradient-to-br from-orange-500/20 to-orange-500/5 shadow-[0_16px_40px_rgba(249,115,22,0.15)]'
+                : 'border-orange-500/20 bg-gradient-to-br from-orange-500/12 to-transparent hover:border-orange-400/30 hover:bg-orange-500/10'"
+            >
+              <div class="flex items-center gap-4">
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-2xl font-semibold"
+                  :class="isActivePage('/certificado')
+                    ? 'bg-orange-500 text-black'
+                    : 'bg-black/40 text-orange-200'"
+                >
+                  PDF
+                </div>
+                <div class="min-w-0">
+                  <p class="text-lg font-semibold text-white">Recibir certificado</p>
+                  <p class="mt-1 text-sm leading-6 text-zinc-300">
+                    Descarga tu certificado profesional de terminacion del curso.
+                  </p>
+                </div>
               </div>
             </RouterLink>
           </div>
