@@ -11,7 +11,7 @@ const checked = ref(false)
 
 const correctAnswers = {
   q1: 'verdadero',
-  q2: 'workflows',
+  q2: 'workflow',
   q3: 'si',
 }
 
@@ -56,27 +56,27 @@ function optionClass(questionKey, optionValue) {
       <div class="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-orange-500/50 via-orange-500/10 to-transparent"></div>
 
       <p class="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
-        Semana 5
+        Semana 9
       </p>
       <h3 class="mt-3 max-w-4xl text-3xl font-semibold text-white sm:text-4xl">
-        n8n base - Automatiza el control de gastos
+        n8n + voz - Agente que habla y responde en tiempo real
       </h3>
       <p class="mt-5 max-w-4xl text-base leading-8 text-zinc-100">
-        En esta semana entras en una de las herramientas mas importantes del curso: n8n. Aqui construyes la base sobre la que despues podras anadir IA, memoria, RAG y agentes mas avanzados. Por eso esta etapa es critica: si entiendes bien como funciona un workflow en n8n, todo lo que venga despues tendra mucho mas sentido y te resultara mucho mas facil de adaptar a casos reales.
+        En esta semana construyes una de las piezas mas llamativas y diferenciadoras del curso: un agente que no solo procesa informacion, sino que tambien habla y responde en tiempo real. Aqui entras en el terreno de las experiencias multimodales, donde la utilidad tecnica se combina con una presentacion mucho mas impactante. El reto no esta solo en que "suene bien", sino en lograr una interaccion util, clara y suficientemente estable como para convertirse en una demo seria o incluso en una solucion aplicable.
       </p>
 
       <div class="mt-6 grid gap-3 sm:grid-cols-3">
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Plataforma</p>
-          <p class="mt-2 text-sm font-semibold text-white">n8n</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Entrada</p>
+          <p class="mt-2 text-sm font-semibold text-white">Voz y tiempo real</p>
         </div>
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Objetivo</p>
-          <p class="mt-2 text-sm font-semibold text-white">Dominar la estructura base</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Infra</p>
+          <p class="mt-2 text-sm font-semibold text-white">Webhook + despliegue</p>
         </div>
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Caso practico</p>
-          <p class="mt-2 text-sm font-semibold text-white">Control de gastos</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Impacto</p>
+          <p class="mt-2 text-sm font-semibold text-white">Demo seria y usable</p>
         </div>
       </div>
     </article>
@@ -87,20 +87,20 @@ function optionClass(questionKey, optionValue) {
           Objetivo principal del aprendizaje
         </p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Construir una base solida en n8n y entender la logica de workflows reales. El objetivo de esta semana no es solo instalar la herramienta o seguir pasos, sino comprender como se estructura un flujo, como se conectan los nodos y como viaja la informacion dentro del sistema.
+          Crear una experiencia multimodal con voz e interaccion en tiempo real. El objetivo de esta semana es que comprendas como unir la logica de un workflow con entrada y salida por voz, despliegue publico y una experiencia de uso mas cercana a una conversacion real.
         </p>
       </article>
 
       <article class="rounded-3xl border border-white/5 bg-black/40 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Tiempo de estudio</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Entre 7 y 9 horas. Lo ideal es dedicar tiempo no solo a montar el flujo, sino tambien a revisarlo paso a paso hasta que entiendas con claridad como interactua cada nodo con el siguiente.
+          Entre 8 y 10 horas. Esta semana requiere no solo construir el sistema, sino tambien probar conversaciones, medir latencia, ajustar claridad y preparar una presentacion solida del resultado.
         </p>
         <div class="mt-5 flex items-center gap-3">
           <div class="h-2 flex-1 rounded-full bg-white/5">
             <div class="h-2 w-3/5 rounded-full bg-gradient-to-r from-orange-500 to-orange-300"></div>
           </div>
-          <span class="text-sm font-semibold text-orange-200">7-9h</span>
+          <span class="text-sm font-semibold text-orange-200">8-10h</span>
         </div>
       </article>
     </div>
@@ -109,38 +109,37 @@ function optionClass(questionKey, optionValue) {
       <article class="rounded-3xl border border-white/5 bg-black/40 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Conceptos clave</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Instalacion local, nodos, workflows, triggers, credenciales, Google Sheets, filtros y logica de datos. Tambien debes empezar a interiorizar una idea esencial: cada nodo cumple una funcion especifica y el valor del workflow depende de como disenas la secuencia y el tratamiento de los datos.
+          ElevenLabs, webhook publico, Cloudflared, Gemini, Twilio, voz y publicacion web. Tambien debes entender una idea central: en un agente de voz no basta con generar respuestas correctas; importa mucho la velocidad, la claridad, la continuidad de la interaccion y la capacidad de manejar fallos de forma elegante.
         </p>
         <div class="mt-5 flex flex-wrap gap-2">
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Instalacion local</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Nodos</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Workflows</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Triggers</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Credenciales</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Google Sheets</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Filtros</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Logica de datos</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">ElevenLabs</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Webhook publico</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Cloudflared</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Gemini</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Twilio</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Voz</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Publicacion web</span>
         </div>
       </article>
 
       <article class="rounded-3xl border border-white/5 bg-zinc-900/60 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Que debes comprender al finalizar</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Debes comprender como crear un workflow funcional en n8n, como fluye la informacion entre nodos y como se transforma en cada paso. Al terminar esta semana, debes ser capaz de leer un flujo con claridad, identificar que entra, que se procesa y que resultado produce.
+          Debes comprender como conectar voz, logica y despliegue para crear una experiencia usable. Al terminar esta semana, debes ser capaz de visualizar todo el recorrido del sistema: desde la entrada del usuario, pasando por el procesamiento del flujo, hasta la salida por voz o llamada, con una experiencia lo bastante clara como para ser mostrada o probada en un contexto real.
         </p>
 
         <div class="mt-6 grid gap-3 sm:grid-cols-3">
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Input</p>
-            <p class="mt-2 text-sm font-semibold text-white">Dato de entrada</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Entrada</p>
+            <p class="mt-2 text-sm font-semibold text-white">Voz del usuario</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
             <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Proceso</p>
-            <p class="mt-2 text-sm font-semibold text-white">Transformacion por nodos</p>
+            <p class="mt-2 text-sm font-semibold text-white">Workflow y modelo</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Output</p>
-            <p class="mt-2 text-sm font-semibold text-white">Resultado del workflow</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Salida</p>
+            <p class="mt-2 text-sm font-semibold text-white">Respuesta hablada</p>
           </div>
         </div>
       </article>
@@ -151,16 +150,16 @@ function optionClass(questionKey, optionValue) {
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Habilidades que desarrollaras</p>
         <div class="mt-4 grid gap-3">
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Base tecnica</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">Instalar n8n, crear workflows basicos y conectar herramientas con seguridad.</p>
+            <p class="text-sm font-semibold text-white">Configuracion multimodal</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">Configurar un agente de voz, publicar un webhook e integrar voz en una experiencia web o telefonica.</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Configuracion</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">Configurar credenciales, aplicar filtros y documentar procesos simples con criterio.</p>
+            <p class="text-sm font-semibold text-white">Evaluacion practica</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">Medir latencia, claridad y coherencia para que el sistema no solo impresione, sino funcione bien.</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Pensamiento estructurado</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">No solo usar nodos, sino entender la logica que los une dentro de un flujo confiable.</p>
+            <p class="text-sm font-semibold text-white">Experiencia de uso</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">Pensar en como se siente usar el agente, cuanto tarda, como responde y que ocurre cuando algo falla.</p>
           </div>
         </div>
       </article>
@@ -170,20 +169,20 @@ function optionClass(questionKey, optionValue) {
           Mini proyecto o ejercicio aplicado al mundo real
         </p>
         <p class="mt-4 text-base leading-8 text-zinc-100">
-          Construiras un sistema de control de gastos personales o empresariales con reglas basicas de seguimiento. Este ejercicio tiene mucho valor porque representa un caso operativo real: registrar movimientos, filtrar informacion relevante y crear una base que luego podria ampliarse con alertas, reportes o decisiones automaticas.
+          Construiras un asistente de voz de atencion inicial. Este ejercicio representa un caso de alto valor para demos y negocio, porque puede aplicarse a recepcion de consultas, atencion basica, calificacion inicial de clientes o acompanamiento en procesos simples. Bien resuelto, es una pieza que llama mucho la atencion y eleva el nivel percibido de tu portafolio.
         </p>
         <div class="mt-5 grid gap-3 sm:grid-cols-3">
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Registro</p>
-            <p class="mt-2 text-sm text-white">Movimientos y gastos</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Canal</p>
+            <p class="mt-2 text-sm text-white">Web o llamada</p>
           </div>
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Filtro</p>
-            <p class="mt-2 text-sm text-white">Datos relevantes</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Interaccion</p>
+            <p class="mt-2 text-sm text-white">Pregunta y respuesta</p>
           </div>
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Escala</p>
-            <p class="mt-2 text-sm text-white">Base para alertas y reportes</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Valor</p>
+            <p class="mt-2 text-sm text-white">Demo y negocio</p>
           </div>
         </div>
       </article>
@@ -193,16 +192,16 @@ function optionClass(questionKey, optionValue) {
       <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Errores comunes</p>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          No entender el input y output de cada nodo y dejar que el flujo funcione "por suerte".
+          Ignorar la latencia y centrarse solo en el efecto visual o auditivo.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Saltarse la configuracion de credenciales y generar fallos innecesarios.
+          Construir algo llamativo pero poco util para un caso real.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Querer introducir IA demasiado pronto sin dominar la estructura base.
+          No definir un fallback claro cuando el flujo no entiende la intencion del usuario.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Si esta parte no queda clara, todo lo avanzado se vuelve fragil.
+          Un agente de voz impresiona mas cuando es estable y util que cuando solo parece avanzado.
         </div>
       </div>
     </article>
@@ -226,7 +225,7 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">1. Verdadero o falso</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            En n8n, entender que datos entran y salen de cada nodo es fundamental para construir workflows confiables.
+            En un agente de voz, la latencia y la claridad de respuesta importan tanto como la calidad del contenido generado.
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
@@ -251,40 +250,40 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">2. Opcion multiple</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            Cual de estas opciones representa mejor el objetivo principal de esta semana?
+            Cual de estas opciones describe mejor el reto principal de este modulo?
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'interfaces')"
-              @click="answers.q2 = 'interfaces'"
+              :class="optionClass('q2', 'bonita')"
+              @click="answers.q2 = 'bonita'"
             >
-              A) Disenar interfaces de usuario avanzadas
+              A) Crear una interfaz bonita sin logica interna
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'workflows')"
-              @click="answers.q2 = 'workflows'"
+              :class="optionClass('q2', 'workflow')"
+              @click="answers.q2 = 'workflow'"
             >
-              B) Dominar la base de workflows en n8n y el flujo de datos entre nodos
+              B) Unir voz, workflow y despliegue para una experiencia funcional y usable
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'rag')"
-              @click="answers.q2 = 'rag'"
+              :class="optionClass('q2', 'reemplazar')"
+              @click="answers.q2 = 'reemplazar'"
             >
-              C) Crear un agente con memoria y RAG
+              C) Reemplazar todos los canales escritos por llamadas obligatorias
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'voz')"
-              @click="answers.q2 = 'voz'"
+              :class="optionClass('q2', 'sin-probar')"
+              @click="answers.q2 = 'sin-probar'"
             >
-              D) Publicar un chatbot con voz en tiempo real
+              D) Usar voz sin necesidad de probar el flujo
             </button>
           </div>
         </div>
@@ -292,7 +291,7 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">3. Si o no</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            Podrias adaptar el flujo de control de gastos a otro caso simple, como control de asistencia, inventario o seguimiento de tareas?
+            Podrias adaptar este agente de voz para atencion inicial, soporte basico o calificacion de leads usando la misma logica base?
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
@@ -341,7 +340,7 @@ function optionClass(questionKey, optionValue) {
         </p>
         <div class="mt-4 space-y-3 text-sm leading-7 text-zinc-100">
           <p><span class="font-semibold text-white">1.</span> Verdadero.</p>
-          <p><span class="font-semibold text-white">2.</span> B) Dominar la base de workflows en n8n y el flujo de datos entre nodos.</p>
+          <p><span class="font-semibold text-white">2.</span> B) Unir voz, workflow y despliegue para una experiencia funcional y usable.</p>
           <p><span class="font-semibold text-white">3.</span> Si.</p>
         </div>
       </div>

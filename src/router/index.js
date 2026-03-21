@@ -49,6 +49,21 @@ const router = createRouter({
           name: 'semana-7',
           component: () => import('@/views/semanas/Semana7View.vue'),
         },
+        {
+          path: 'semana-8',
+          name: 'semana-8',
+          component: () => import('@/views/semanas/Semana8View.vue'),
+        },
+        {
+          path: 'semana-9',
+          name: 'semana-9',
+          component: () => import('@/views/semanas/Semana9View.vue'),
+        },
+        {
+          path: 'semana-10',
+          name: 'semana-10',
+          component: () => import('@/views/semanas/Semana10View.vue'),
+        },
       ],
     },
   ],

@@ -11,7 +11,7 @@ const checked = ref(false)
 
 const correctAnswers = {
   q1: 'verdadero',
-  q2: 'workflows',
+  q2: 'evidencia',
   q3: 'si',
 }
 
@@ -56,27 +56,27 @@ function optionClass(questionKey, optionValue) {
       <div class="absolute bottom-0 left-0 h-px w-full bg-gradient-to-r from-orange-500/50 via-orange-500/10 to-transparent"></div>
 
       <p class="text-xs font-semibold uppercase tracking-[0.3em] text-orange-300">
-        Semana 5
+        Semana 10
       </p>
       <h3 class="mt-3 max-w-4xl text-3xl font-semibold text-white sm:text-4xl">
-        n8n base - Automatiza el control de gastos
+        Cierre, consolidacion y portafolio
       </h3>
       <p class="mt-5 max-w-4xl text-base leading-8 text-zinc-100">
-        En esta semana entras en una de las herramientas mas importantes del curso: n8n. Aqui construyes la base sobre la que despues podras anadir IA, memoria, RAG y agentes mas avanzados. Por eso esta etapa es critica: si entiendes bien como funciona un workflow en n8n, todo lo que venga despues tendra mucho mas sentido y te resultara mucho mas facil de adaptar a casos reales.
+        En esta ultima etapa el objetivo ya no es aprender una herramienta nueva, sino hacer algo igual de importante: convertir lo que construiste en evidencia profesional. Muchos estudiantes terminan cursos con ejercicios dispersos, pero sin nada realmente presentable. Esta semana corrige ese problema. Aqui vas a transformar automatizaciones sueltas en piezas que comuniquen valor, demuestren criterio y te ayuden a mostrar lo que sabes hacer de forma clara frente a clientes, reclutadores o colaboradores.
       </p>
 
       <div class="mt-6 grid gap-3 sm:grid-cols-3">
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Plataforma</p>
-          <p class="mt-2 text-sm font-semibold text-white">n8n</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Enfoque</p>
+          <p class="mt-2 text-sm font-semibold text-white">Presentacion profesional</p>
         </div>
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Objetivo</p>
-          <p class="mt-2 text-sm font-semibold text-white">Dominar la estructura base</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Activo</p>
+          <p class="mt-2 text-sm font-semibold text-white">Portafolio real</p>
         </div>
         <div class="rounded-2xl border border-white/8 bg-black/30 p-4">
-          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Caso practico</p>
-          <p class="mt-2 text-sm font-semibold text-white">Control de gastos</p>
+          <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Meta</p>
+          <p class="mt-2 text-sm font-semibold text-white">Demostrar valor con claridad</p>
         </div>
       </div>
     </article>
@@ -87,20 +87,20 @@ function optionClass(questionKey, optionValue) {
           Objetivo principal del aprendizaje
         </p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Construir una base solida en n8n y entender la logica de workflows reales. El objetivo de esta semana no es solo instalar la herramienta o seguir pasos, sino comprender como se estructura un flujo, como se conectan los nodos y como viaja la informacion dentro del sistema.
+          Convertir lo aprendido durante el curso en proyectos presentables, bien documentados y utiles para portafolio, freelance o empleo. La meta no es solo "guardar" tus ejercicios, sino organizarlos y presentarlos como soluciones reales que resuelven problemas concretos.
         </p>
       </article>
 
       <article class="rounded-3xl border border-white/5 bg-black/40 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Tiempo de estudio</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Entre 7 y 9 horas. Lo ideal es dedicar tiempo no solo a montar el flujo, sino tambien a revisarlo paso a paso hasta que entiendas con claridad como interactua cada nodo con el siguiente.
+          Entre 6 y 8 horas. Lo ideal es dividir este tiempo entre seleccion de proyectos, documentacion, grabacion de demos y mejora de la presentacion final.
         </p>
         <div class="mt-5 flex items-center gap-3">
           <div class="h-2 flex-1 rounded-full bg-white/5">
-            <div class="h-2 w-3/5 rounded-full bg-gradient-to-r from-orange-500 to-orange-300"></div>
+            <div class="h-2 w-1/2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300"></div>
           </div>
-          <span class="text-sm font-semibold text-orange-200">7-9h</span>
+          <span class="text-sm font-semibold text-orange-200">6-8h</span>
         </div>
       </article>
     </div>
@@ -109,38 +109,36 @@ function optionClass(questionKey, optionValue) {
       <article class="rounded-3xl border border-white/5 bg-black/40 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Conceptos clave</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Instalacion local, nodos, workflows, triggers, credenciales, Google Sheets, filtros y logica de datos. Tambien debes empezar a interiorizar una idea esencial: cada nodo cumple una funcion especifica y el valor del workflow depende de como disenas la secuencia y el tratamiento de los datos.
+          Documentacion, demos, portafolio, narrativa profesional, evidencia de habilidades y presentacion de proyectos. Tambien debes entender una idea esencial: un proyecto no genera valor profesional solo porque funciona, sino porque puedes explicar que problema resuelve, como lo construiste y por que tiene utilidad en el mundo real.
         </p>
         <div class="mt-5 flex flex-wrap gap-2">
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Instalacion local</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Nodos</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Workflows</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Triggers</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Credenciales</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Google Sheets</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Filtros</span>
-          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Logica de datos</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Documentacion</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Demos</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Portafolio</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Narrativa profesional</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Evidencia de habilidades</span>
+          <span class="rounded-full border border-orange-500/15 bg-orange-500/10 px-3 py-1 text-xs text-orange-100">Presentacion de proyectos</span>
         </div>
       </article>
 
       <article class="rounded-3xl border border-white/5 bg-zinc-900/60 p-6">
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Que debes comprender al finalizar</p>
         <p class="mt-4 text-base leading-8 text-zinc-200">
-          Debes comprender como crear un workflow funcional en n8n, como fluye la informacion entre nodos y como se transforma en cada paso. Al terminar esta semana, debes ser capaz de leer un flujo con claridad, identificar que entra, que se procesa y que resultado produce.
+          Debes comprender como explicar el valor real de lo construido y como presentar proyectos de automatizacion de forma profesional. Al terminar esta semana, deberias poder mostrar tus mejores trabajos como activos claros: con proposito, logica, resultado y potencial de aplicacion.
         </p>
 
         <div class="mt-6 grid gap-3 sm:grid-cols-3">
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Input</p>
-            <p class="mt-2 text-sm font-semibold text-white">Dato de entrada</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Problema</p>
+            <p class="mt-2 text-sm font-semibold text-white">Que resuelve</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Proceso</p>
-            <p class="mt-2 text-sm font-semibold text-white">Transformacion por nodos</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Logica</p>
+            <p class="mt-2 text-sm font-semibold text-white">Como funciona</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Output</p>
-            <p class="mt-2 text-sm font-semibold text-white">Resultado del workflow</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-zinc-500">Valor</p>
+            <p class="mt-2 text-sm font-semibold text-white">Por que importa</p>
           </div>
         </div>
       </article>
@@ -151,16 +149,16 @@ function optionClass(questionKey, optionValue) {
         <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Habilidades que desarrollaras</p>
         <div class="mt-4 grid gap-3">
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Base tecnica</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">Instalar n8n, crear workflows basicos y conectar herramientas con seguridad.</p>
+            <p class="text-sm font-semibold text-white">Documentacion y demos</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">Documentar, grabar demos y organizar entregables con una narrativa clara.</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Configuracion</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">Configurar credenciales, aplicar filtros y documentar procesos simples con criterio.</p>
+            <p class="text-sm font-semibold text-white">Arquitectura explicada</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">Explicar la arquitectura de un flujo y preparar piezas de portafolio con criterio tecnico.</p>
           </div>
           <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4">
-            <p class="text-sm font-semibold text-white">Pensamiento estructurado</p>
-            <p class="mt-2 text-sm leading-7 text-zinc-300">No solo usar nodos, sino entender la logica que los une dentro de un flujo confiable.</p>
+            <p class="text-sm font-semibold text-white">Venta de valor</p>
+            <p class="mt-2 text-sm leading-7 text-zinc-300">No solo construir, sino comunicar y vender con claridad el valor de una solucion.</p>
           </div>
         </div>
       </article>
@@ -170,20 +168,20 @@ function optionClass(questionKey, optionValue) {
           Mini proyecto o ejercicio aplicado al mundo real
         </p>
         <p class="mt-4 text-base leading-8 text-zinc-100">
-          Construiras un sistema de control de gastos personales o empresariales con reglas basicas de seguimiento. Este ejercicio tiene mucho valor porque representa un caso operativo real: registrar movimientos, filtrar informacion relevante y crear una base que luego podria ampliarse con alertas, reportes o decisiones automaticas.
+          Construiras un portfolio board con 3 automatizaciones o agentes explicados de forma profesional. Cada pieza debe incluir el problema que resuelve, el flujo general, las herramientas utilizadas, el resultado esperado y una breve explicacion del valor que tendria para un negocio, cliente o equipo.
         </p>
         <div class="mt-5 grid gap-3 sm:grid-cols-3">
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Registro</p>
-            <p class="mt-2 text-sm text-white">Movimientos y gastos</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Pieza 1</p>
+            <p class="mt-2 text-sm text-white">Caso y flujo</p>
           </div>
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Filtro</p>
-            <p class="mt-2 text-sm text-white">Datos relevantes</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Pieza 2</p>
+            <p class="mt-2 text-sm text-white">Herramientas y resultado</p>
           </div>
           <div class="rounded-2xl border border-orange-500/15 bg-black/25 p-4">
-            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Escala</p>
-            <p class="mt-2 text-sm text-white">Base para alertas y reportes</p>
+            <p class="text-xs uppercase tracking-[0.25em] text-orange-200/80">Pieza 3</p>
+            <p class="mt-2 text-sm text-white">Valor para negocio</p>
           </div>
         </div>
       </article>
@@ -193,16 +191,16 @@ function optionClass(questionKey, optionValue) {
       <p class="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">Errores comunes</p>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          No entender el input y output de cada nodo y dejar que el flujo funcione "por suerte".
+          Tener proyectos funcionales pero mal explicados.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Saltarse la configuracion de credenciales y generar fallos innecesarios.
+          No mostrar el caso de negocio ni presentar resultados de forma clara.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Querer introducir IA demasiado pronto sin dominar la estructura base.
+          Dejar todo como capturas sueltas sin contexto.
         </div>
         <div class="rounded-2xl border border-white/8 bg-white/[0.02] p-4 text-sm leading-7 text-zinc-300">
-          Si esta parte no queda clara, todo lo avanzado se vuelve fragil.
+          Un proyecto sin narrativa pierde gran parte de su valor, aunque tecnicamente este bien hecho.
         </div>
       </div>
     </article>
@@ -226,7 +224,7 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">1. Verdadero o falso</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            En n8n, entender que datos entran y salen de cada nodo es fundamental para construir workflows confiables.
+            Un proyecto funcional pero mal presentado puede perder valor profesional frente a otro mas simple pero mejor documentado.
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
@@ -251,40 +249,40 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">2. Opcion multiple</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            Cual de estas opciones representa mejor el objetivo principal de esta semana?
+            Cual de estas opciones representa mejor el objetivo de esta semana?
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'interfaces')"
-              @click="answers.q2 = 'interfaces'"
+              :class="optionClass('q2', 'herramienta')"
+              @click="answers.q2 = 'herramienta'"
             >
-              A) Disenar interfaces de usuario avanzadas
+              A) Aprender una nueva herramienta desde cero
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'workflows')"
-              @click="answers.q2 = 'workflows'"
+              :class="optionClass('q2', 'evidencia')"
+              @click="answers.q2 = 'evidencia'"
             >
-              B) Dominar la base de workflows en n8n y el flujo de datos entre nodos
+              B) Convertir ejercicios del curso en evidencia profesional presentable
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'rag')"
-              @click="answers.q2 = 'rag'"
+              :class="optionClass('q2', 'repetir')"
+              @click="answers.q2 = 'repetir'"
             >
-              C) Crear un agente con memoria y RAG
+              C) Repetir todos los modulos sin documentar nada
             </button>
             <button
               type="button"
               class="rounded-2xl border px-4 py-3 text-left text-sm transition-all"
-              :class="optionClass('q2', 'voz')"
-              @click="answers.q2 = 'voz'"
+              :class="optionClass('q2', 'portada')"
+              @click="answers.q2 = 'portada'"
             >
-              D) Publicar un chatbot con voz en tiempo real
+              D) Disenar unicamente una portada visual llamativa
             </button>
           </div>
         </div>
@@ -292,7 +290,7 @@ function optionClass(questionKey, optionValue) {
         <div class="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
           <p class="font-semibold text-white">3. Si o no</p>
           <p class="mt-2 text-sm leading-7 text-zinc-300">
-            Podrias adaptar el flujo de control de gastos a otro caso simple, como control de asistencia, inventario o seguimiento de tareas?
+            Podrias seleccionar tres proyectos del curso y explicarlos de forma clara para portafolio, freelance o una entrevista?
           </p>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <button
@@ -341,7 +339,7 @@ function optionClass(questionKey, optionValue) {
         </p>
         <div class="mt-4 space-y-3 text-sm leading-7 text-zinc-100">
           <p><span class="font-semibold text-white">1.</span> Verdadero.</p>
-          <p><span class="font-semibold text-white">2.</span> B) Dominar la base de workflows en n8n y el flujo de datos entre nodos.</p>
+          <p><span class="font-semibold text-white">2.</span> B) Convertir ejercicios del curso en evidencia profesional presentable.</p>
           <p><span class="font-semibold text-white">3.</span> Si.</p>
         </div>
       </div>

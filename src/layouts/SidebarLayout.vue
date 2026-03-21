@@ -32,20 +32,38 @@ const pages = [
   {
     to: '/semana-5',
     title: 'Semana 5',
-    subtitle: 'Bases de datos',
+    subtitle: 'n8n base y control de gastos',
     badge: '05',
   },
   {
     to: '/semana-6',
     title: 'Semana 6',
-    subtitle: 'Automatizaciones reales',
+    subtitle: 'n8n con IA en automatizaciones',
     badge: '06',
   },
   {
     to: '/semana-7',
     title: 'Semana 7',
-    subtitle: 'Proyecto final',
+    subtitle: 'Agente con memoria y datos propios',
     badge: '07',
+  },
+  {
+    to: '/semana-8',
+    title: 'Semana 8',
+    subtitle: 'RAG con documentos y vectores',
+    badge: '08',
+  },
+  {
+    to: '/semana-9',
+    title: 'Semana 9',
+    subtitle: 'Agente de voz en tiempo real',
+    badge: '09',
+  },
+  {
+    to: '/semana-10',
+    title: 'Semana 10',
+    subtitle: 'Cierre y portafolio profesional',
+    badge: '10',
   },
 ]
 
