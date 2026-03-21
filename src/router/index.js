@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SidebarLayout from '@/layouts/SidebarLayout.vue'
+import { isRouteUnlocked, lockedRedirectPath } from '@/config/courseAccess'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -72,6 +73,18 @@ const router = createRouter({
       ],
     },
   ],
+})
+
+router.beforeEach((to) => {
+  if (to.path === '/') {
+    return true
+  }
+
+  if (isRouteUnlocked(to.path)) {
+    return true
+  }
+
+  return { path: lockedRedirectPath }
 })
 
 export default router
