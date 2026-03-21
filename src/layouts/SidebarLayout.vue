@@ -1,8 +1,12 @@
 <script setup>
-import { computed } from 'vue'
-import { RouterLink, RouterView, useRoute } from 'vue-router'
+import { computed, ref } from 'vue'
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
+const certificateStudentKey = 'curso_n8n_student_name'
+const showCertificateModal = ref(false)
+const certificateStudentName = ref('')
 
 const pages = [
   {
@@ -77,6 +81,27 @@ function isActivePage(path) {
   return route.path === path
 }
 
+function requestCertificateAccess() {
+  certificateStudentName.value = window.localStorage.getItem(certificateStudentKey) ?? ''
+  showCertificateModal.value = true
+}
+
+function closeCertificateModal() {
+  showCertificateModal.value = false
+}
+
+function confirmCertificateAccess() {
+  const normalizedName = certificateStudentName.value.trim()
+
+  if (!normalizedName) {
+    return
+  }
+
+  window.localStorage.setItem(certificateStudentKey, normalizedName)
+  showCertificateModal.value = false
+  router.push('/certificado')
+}
+
 const activePage = computed(
   () => pages.find((page) => isActivePage(page.to)) ?? pages[0],
 )
@@ -99,7 +124,7 @@ const activePage = computed(
                 Curso
               </p>
               <h1 class="text-2xl font-semibold tracking-tight text-white">
-                n8n Curso Premium
+                Curso n8n
               </h1>
             </div>
           </div>
@@ -153,12 +178,13 @@ const activePage = computed(
           </div>
 
           <div class="mt-6 border-t border-white/5 pt-6">
-            <RouterLink
-              to="/certificado"
+            <button
+              type="button"
               class="block rounded-3xl border px-5 py-5 transition-all duration-200"
               :class="isActivePage('/certificado')
                 ? 'border-orange-400/40 bg-gradient-to-br from-orange-500/20 to-orange-500/5 shadow-[0_16px_40px_rgba(249,115,22,0.15)]'
                 : 'border-orange-500/20 bg-gradient-to-br from-orange-500/12 to-transparent hover:border-orange-400/30 hover:bg-orange-500/10'"
+              @click="requestCertificateAccess"
             >
               <div class="flex items-center gap-4">
                 <div
@@ -176,7 +202,7 @@ const activePage = computed(
                   </p>
                 </div>
               </div>
-            </RouterLink>
+            </button>
           </div>
         </nav>
       </aside>
@@ -191,9 +217,7 @@ const activePage = computed(
               <h2 class="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
                 {{ activePage.title }}
               </h2>
-              <p class="mt-3 max-w-2xl text-sm leading-7 text-zinc-400">
-                Un espacio limpio para organizar tus clases de n8n con navegacion por semanas y una estetica naranja sobre negro.
-              </p>
+             
             </div>
 
             <div class="rounded-2xl border border-orange-500/15 bg-orange-500/10 px-4 py-3 text-sm text-orange-200">
@@ -204,6 +228,61 @@ const activePage = computed(
           <RouterView />
         </section>
       </main>
+    </div>
+
+    <div
+      v-if="showCertificateModal"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4 backdrop-blur-sm"
+    >
+      <div class="w-full max-w-lg rounded-[28px] border border-orange-500/20 bg-[#0a0a0a] p-6 shadow-[0_30px_90px_rgba(0,0,0,0.55)]">
+        <div class="flex items-start gap-4">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-500 font-black text-black shadow-[0_0_30px_rgba(249,115,22,0.35)]">
+            n8n
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs font-semibold uppercase tracking-[0.32em] text-orange-300">
+              Certificacion final
+            </p>
+            <h3 class="mt-2 text-2xl font-semibold text-white">
+              Antes de continuar
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-zinc-300">
+              Escribe el nombre del estudiante para generar el certificado con un formato profesional y dejarlo precargado en la descarga.
+            </p>
+          </div>
+        </div>
+
+        <label class="mt-6 block rounded-3xl border border-white/10 bg-white/[0.02] p-4">
+          <span class="text-xs font-semibold uppercase tracking-[0.28em] text-zinc-500">
+            Nombre del estudiante
+          </span>
+          <input
+            v-model="certificateStudentName"
+            type="text"
+            class="mt-3 w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition placeholder:text-zinc-500 focus:border-orange-400/40"
+            placeholder="Escribe el nombre completo"
+            @keydown.enter="confirmCertificateAccess"
+          >
+        </label>
+
+        <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+          <button
+            type="button"
+            class="rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-3 text-sm font-semibold text-zinc-200 transition hover:border-orange-500/20 hover:bg-orange-500/5"
+            @click="closeCertificateModal"
+          >
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="rounded-2xl border border-orange-400/30 bg-orange-500 px-5 py-3 text-sm font-semibold text-black transition hover:bg-orange-400 disabled:cursor-not-allowed disabled:opacity-60"
+            :disabled="!certificateStudentName.trim()"
+            @click="confirmCertificateAccess"
+          >
+            Continuar al certificado
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
