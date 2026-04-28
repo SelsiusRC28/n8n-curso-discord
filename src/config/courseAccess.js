@@ -7,7 +7,7 @@ export const courseRouteAccess = {
   '/semana-3': true,
   '/semana-4': true,
   '/semana-5': true,
-  '/semana-6': false,
+  '/semana-6': true,
   '/semana-7': false,
   '/semana-8': false,
   '/semana-9': false,
