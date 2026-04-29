@@ -1,7 +1,7 @@
 <script setup>
 import { computed, ref } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import { isRouteUnlocked } from '@/config/courseAccess'
+import { courseRouteAccess, isRouteUnlocked } from '@/config/courseAccess'
 
 const route = useRoute()
 const router = useRouter()
@@ -110,6 +110,10 @@ function confirmCertificateAccess() {
 const activePage = computed(
   () => pages.find((page) => isActivePage(page.to)) ?? pages[0],
 )
+
+const semanaRoutes = Object.keys(courseRouteAccess).filter((r) => r.startsWith('/semana'))
+const unlockedCount = computed(() => semanaRoutes.filter((r) => courseRouteAccess[r]).length)
+const progressPct = computed(() => Math.round((unlockedCount.value / 10) * 100))
 </script>
 
 <template>
@@ -117,7 +121,7 @@ const activePage = computed(
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(249,115,22,0.16),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.08),_transparent_25%)]"></div>
 
     <div class="relative flex min-h-screen flex-col lg:flex-row">
-      <aside class="w-full border-b border-orange-500/10 bg-black/80 backdrop-blur lg:min-h-screen lg:w-[320px] lg:border-b-0 lg:border-r">
+      <aside class="w-full border-b border-orange-500/10 bg-black/80 backdrop-blur lg:sticky lg:top-0 lg:h-screen lg:w-[320px] lg:overflow-y-auto lg:border-b-0 lg:border-r">
         <div class="border-b border-orange-500/10 p-6">
           <div class="flex items-center gap-4">
             <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-orange-500 font-black text-black shadow-[0_0_30px_rgba(249,115,22,0.35)]">
@@ -134,13 +138,17 @@ const activePage = computed(
             </div>
           </div>
 
-          <div class="mt-6 rounded-2xl border border-orange-500/15 bg-gradient-to-br from-orange-500/15 to-white/[0.03] p-4">
-            <p class="text-xs uppercase tracking-[0.28em] text-zinc-400">
-              Enfoque
-            </p>
-            <p class="mt-2 text-sm leading-6 text-zinc-200">
-              Automatizaciones minimalistas, flujos claros y practica semana a semana.
-            </p>
+          <div class="mt-5">
+            <div class="mb-2 flex items-center justify-between">
+              <span class="text-xs uppercase tracking-[0.26em] text-zinc-500">Progreso del curso</span>
+              <span class="text-xs font-semibold text-orange-300">{{ unlockedCount }} / 10 sem.</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-white/[0.06]">
+              <div
+                class="h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 transition-all duration-700 ease-out"
+                :style="{ width: progressPct + '%' }"
+              />
+            </div>
           </div>
         </div>
 
@@ -227,7 +235,7 @@ const activePage = computed(
                     ? 'bg-orange-500 text-black'
                     : 'bg-black/40 text-orange-200'"
                 >
-                  PDF
+                  OK
                 </div>
                 <div class="min-w-0">
                   <p class="text-lg font-semibold text-white">Recibir certificado</p>
@@ -244,7 +252,7 @@ const activePage = computed(
             >
               <div class="flex items-center gap-4">
                 <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-zinc-900 font-semibold text-zinc-500">
-                  PDF
+                  OK
                 </div>
                 <div class="min-w-0 flex-1">
                   <p class="text-lg font-semibold text-zinc-400">Recibir certificado</p>
@@ -260,20 +268,14 @@ const activePage = computed(
 
       <main class="flex-1 p-4 sm:p-6 lg:p-10">
         <section class="rounded-[28px] border border-orange-500/10 bg-zinc-950/80 p-6 shadow-[0_30px_80px_rgba(0,0,0,0.45)] backdrop-blur sm:p-8">
-          <div class="mb-8 flex flex-col gap-4 border-b border-white/5 pb-6 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p class="text-xs uppercase tracking-[0.35em] text-orange-400/80">
-                Curso de automatizacion
-              </p>
-              <h2 class="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-                {{ activePage.title }}
-              </h2>
-             
-            </div>
-
-            <div class="rounded-2xl border border-orange-500/15 bg-orange-500/10 px-4 py-3 text-sm text-orange-200">
-              Ruta activa: <span class="font-semibold text-white">{{ activePage.subtitle }}</span>
-            </div>
+          <div class="mb-8 border-b border-white/5 pb-6">
+            <p class="text-xs uppercase tracking-[0.35em] text-orange-400/80">
+              Curso de automatizacion
+            </p>
+            <h2 class="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              {{ activePage.title }}
+            </h2>
+            <p class="mt-1.5 text-sm text-zinc-400">{{ activePage.subtitle }}</p>
           </div>
 
           <RouterView />
